@@ -1,0 +1,472 @@
+:root {
+    --primary-color: #db0001;
+    --text-color: #fff;
+    --background-color: #000;
+    --overlay-color: rgba(0, 0, 0, 0.7);
+    --border-color: #ffffffb7;
+    --placeholder-color: #999999;
+    --description-color: #878787;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), url(./images/header-image.png);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8px;
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .logo {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  nav button {
+    border: 0;
+    outline: 0;
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .language-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid var(--text-color);
+  }
+  
+  .language-btn img {
+    width: 10px;
+    margin-left: 10px;
+  }
+  
+  .header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .header-content h1 {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+  }
+  
+  .header-content h3 {
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .email-start {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .email-start input {
+    padding: 15px 30px;
+    border-radius: 8px;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    margin-right: 10px;
+    width: 400px;
+  }
+  
+  .email-start input::placeholder {
+    color: var(--placeholder-color);
+  }
+  
+  .email-start input:focus {
+    border: 2px solid var(--text-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  }
+  
+  .email-start button {
+    padding: 15px 30px;
+    border-radius: 8px;
+    background: var(--primary-color);
+    border: 0;
+    outline: 0;
+    color: var(--text-color);
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .now {
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  #now{
+    padding-bottom: 30px;
+  }
+  
+  .Option {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .Option select {
+    padding: 10px 15px;
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .Option select:focus {
+    border: 2px solid var(--text-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.6);
+  }
+  
+  .Option select option {
+    color: var(--background-color);
+    background: var(--text-color);
+  }
+  
+  .carousel-container {
+    position: relative;
+    
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+  .carousel-title {
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin: 0 4% 0.5em 4%;
+  }
+  
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    margin-left: 4%;
+    gap: 40px;
+    border-radius: 30px;
+  }
+  
+  .carousel-item {
+    flex: 0 0 16.66666667%;
+    max-width: 16.66666667%;
+    padding: 0 2px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+  }
+  /*  hover use */
+  .carousel-item:hover {
+    transform: scale(1.1);
+    z-index: 1;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--overlay-color);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .nav-button.prev {
+    left: 0;
+  }
+  
+  .nav-button.next {
+    right: 0;
+  }
+  
+  .section-features {
+    width: 80%;
+    padding: 20px;
+    margin: auto;
+  }
+  #join{
+    padding-bottom: 30px;
+  }
+  .section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .feature-card {
+    width: 300px;
+    min-height: 260px;
+    background: radial-gradient(ellipse at top left, #311166, #1D1932);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .feature-title {
+    font-size: 1.2em;
+    font-weight: 650;
+    margin-bottom: 15px;
+  }
+  
+  .feature-description {
+    color: var(--description-color);
+    flex-grow: 1;
+  }
+  
+  .feature-icon {
+    width: 80px;
+    height: 80px;
+    align-self: flex-end;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .header-content h1 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+  
+    .email-start {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .email-start input,
+    .email-start button {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .Option {
+      flex-direction: column;
+    }
+  
+    .carousel-item {
+      flex: 0 0 33.33333333%;
+      max-width: 33.33333333%;
+    }
+  
+    .feature-card {
+      width: 100%;
+    }
+  }
+
+  /* FAQ section styles for frequently asked questions 
+*/
+
+.section-faq{
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+}
+/* heading style 
+*/
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+  
+  color: white;
+}
+
+/* faq entries
+*/
+.faq-list{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 76%;
+  margin: auto;
+}
+
+/* alone faq design */
+
+.faq-entry{
+  background-color: #333;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition:background-color 0.3s ease;
+}
+
+
+.faq-entry.active {
+  background-color: #555;
+}
+
+ /* 
+* Question styling within FAQ entries 
+*/
+.faq-question{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: white;
+}
+
+ /* 
+* Answer styling within FAQ entries 
+*/
+
+.faq-answer{
+  display:none ;  /*erase  content */
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ccc;
+
+}
+.faq-entry.active .faq-answer{
+  display: block;
+}
+
+/* Toggle icon */
+.toggle-iocn{
+  font-size: 1.2rem;
+}
+
+/* Subscription section styles */
+
+.subscription-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 0;
+  background-color: #000;
+  width: 80%;
+  margin: auto;
+}
+
+.subscription-section p{
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subscription-form{
+  display: flex;
+  grid:10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.subscription-form input[type="email"]{
+  padding: 15px;
+  color:white;
+  font-size: 1rem;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: none;
+  color: white;
+}
+
+.subscription-form button{
+  background-color: #db0001;
+  border: 0;
+  margin-left: 20px;
+  width: 150px;
+  border-radius: 5px;
+color: #fff;
+font-size: 1rem;
+font-weight: 550;
+}
+
+/* Footer deign */
+
+.site-footer{
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  background-color: #000;
+}
+
+.footer-title{
+  justify-content: center;
+  font-size: 1rem;
+  
+  margin-bottom: 20px;
+  color: #888;
+  font-weight: bold;
+}
+
+.footer-links{
+  justify-content: center;
+  align-items: center;
+  width: 76%;
+ /* margin: auto; */
+  display: flex;
+  flex-wrap: wrap;
+} 
+
+.footer-link-group{
+  width: 25%;
+  margin-bottom: 20px;
+}
+.footer-link-group a{
+  display: block;
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 12px;
+}
